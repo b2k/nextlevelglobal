@@ -1,0 +1,80 @@
+/* ==== SveltePress action buttons – brand override ==== */
+/* Load AFTER @sveltepress/theme-default styles */
+
+/* Stop the inherited gradients just for svp-action */
+.svp-action {
+  --un-gradient: none;
+  --un-gradient-stops: none;
+  background-image: none !important;
+}
+
+/* Shared button feel */
+.svp-action {
+  border-radius: 0.75rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 75%, black 25%);
+  padding: 0.625rem 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease, transform .06s ease;
+}
+.svp-action:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+.svp-action:active {
+  transform: translateY(1px);
+}
+
+/* Primary: solid teal */
+.svp-action.svp-action--primary {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-color: color-mix(in oklab, var(--primary) 85%, black 15%);
+}
+.svp-action.svp-action--primary:hover {
+  background: var(--primary-hover) !important;
+}
+.svp-action.svp-action--primary:active {
+  background: var(--primary-active) !important;
+}
+
+/* Secondary: outline brick that fills on hover */
+.svp-action.svp-action--secondary {
+  background: transparent !important;
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+.svp-action.svp-action--secondary:hover {
+  background: color-mix(in oklab, var(--accent) 12%, white 88%) !important;
+}
+html.dark .svp-action.svp-action--secondary:hover {
+  background: color-mix(in oklab, var(--accent) 24%, black 76%) !important;
+}
+
+/* Ghost: subtle surface button */
+.svp-action.svp-action--ghost {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+.svp-action.svp-action--ghost:hover {
+  background: color-mix(in oklab, var(--surface) 80%, var(--primary) 20%) !important;
+}
+
+/* External icon + label colors */
+.svp-action .label,
+.svp-action .external-icon {
+  color: currentColor !important;
+}
+
+/* Dark mode tweaks */
+html.dark .svp-action {
+  border-color: color-mix(in oklab, var(--primary) 45%, white 5%) !important;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.35);
+}
+html.dark .svp-action.svp-action--ghost {
+  background: #272222 !important; /* matches your dark surface */
+  color: var(--text) !important;
+  border-color: #3b3533 !important;
+}

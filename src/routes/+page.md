@@ -1,17 +1,45 @@
 ---
-title: Welcome to Sveltepress
-heroImage: /sveltepress@3x.png
-tagline: A simple, easy to use content centered site build tool with the full power of Sveltekit.
+title: Next Level Global
+layout: home
+tagline: Christ-centered discipleship in small groups.
+
 actions:
-  - label: View on github
+  - label: Join a Group
+    to: /groups
     type: primary
-    to: https://github.com/Blackman99/sveltepress
-    external: true
+
 features:
-  - title: Markdown centered
-    description: To help you can start writing with minimal configuration
-  - title: Build with Sveltekit
-    description: Preserve the full power of Sveltekit. So that you can do more than SSG
-  - title: Svelte in Markdown
-    description: Feel free to use svelte in markdown. Explore infinite possibilities.
+  - title: Scripture First
+    description: Daily Bible reading and memorization with accountability.
+    icon:                 # <— use Iconify
+      type: iconify
+      collection: lucide
+      name: book
+
+  - title: Christ-Centered Community
+    description: Walk together in grace and truth.
+    icon:
+      type: iconify
+      collection: mdi
+      name: account-group
+
+  - title: Weekly Rhythm
+    description: Meet weekly with a simple, repeatable format.
+    icon:
+      type: iconify
+      collection: lucide
+      name: calendar
+
+  - title: Gospel & Mission
+    description: Practice and share the hope you have.
+    icon:
+      type: iconify
+      collection: ph
+      name: target
+
+  # If you ever omit an icon and don’t want a random emoji:
+  - title: Theming
+    description: Brand colors and clean UI.
+    icon: null
+    noRandomIcon: true
 ---

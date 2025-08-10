@@ -1,4 +1,6 @@
 <script>
+  import '../app.postcss';
+  import '../rebrand.css';
   const { children } = $props()
 </script>
 

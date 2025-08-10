@@ -1,0 +1,32 @@
+/* src/app.postcss (or app.css) */
+:root {
+  /* site tokens */
+  --bg: #EDEBE6;
+  --surface: #FFFFFF;
+  --text: #262222;
+  --muted: #5E5654;
+  --border: #D4C6B9;
+
+  --primary: #5A96AF;
+  --primary-hover: #7BABBF;
+  --primary-active: #4C7F94;
+
+  --accent: #734239;
+  --accent-hover: #A4847E;
+  --accent-active: #5C342D;
+
+  --sand-25: #F2ECE5;
+  --sand-50: #E6DACE;
+
+  /* map to theme-default’s internal vars */
+  --docsearch-primary-color: var(--primary);
+  --svp-expansion-bg: var(--sand-25);
+  --svp-expansion-bg-darker: var(--sand-50);
+  --svp-expansion-bg-darker2: #DDD2C9;
+}
+html.dark {
+  --docsearch-text-color: #EDEBE6;
+  --svp-expansion-bg: #2C2828;
+  --svp-expansion-bg-darker: #272222;
+  --svp-expansion-bg-darker2: #1F1B1B;
+}
